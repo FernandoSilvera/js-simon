@@ -47,5 +47,5 @@ function checkSequence() {
   alert(`Numbers guessed: ${correctNums.length} (${correctNums})`)
 }
 
-// Hide the sequence for 30 secs
+// Play after 30 secs
 setTimeout (simonSays, 30000);
