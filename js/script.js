@@ -12,16 +12,15 @@ for (let i = 0; i < numsAmount; i++) {
     i--;
   } else {
     randomNums.push(randomNum);
-    numbersSequence.innerHTML += randomNums[i] + " - ";
+    numbersSequence.innerHTML += " " + randomNums[i] + " ";
   }   
 }
 
-function hideSequence () {
+function simonSays () {
   numbers.remove(randomNums);
 
-  askUserNums();
-  checkSequence();
-  alert(`Numbers guessed: ${correctNums.length} (${correctNums})`)
+  setTimeout (askUserNums, 1);
+  setTimeout (checkSequence, 1);
 }
 
 // Ask the user to repeat the random numbers
@@ -37,13 +36,16 @@ function askUserNums () {
   }
 }
 
+// Check correct numbers and visualize it
 function checkSequence() {
   for (let i = 0; i < numsAmount; i++) {
     if (randomNums.includes(userNums[i])) {
       correctNums.push(userNums[i]);
     } 
   }
+
+  alert(`Numbers guessed: ${correctNums.length} (${correctNums})`)
 }
 
 // Hide the sequence for 30 secs
-setTimeout (hideSequence, 3000);
+setTimeout (simonSays, 3000);
