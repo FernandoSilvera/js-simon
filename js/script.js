@@ -44,7 +44,7 @@ function checkSequence() {
     } 
   }
 
-  alert(`Numbers guessed: ${correctNums.length} (${correctNums})`)
+  alert(`Numbers guessed: ${correctNums.length} - [${correctNums}]`)
 }
 
 // Play after 30 secs
