@@ -5,7 +5,7 @@ const userNums = [];
 const correctNums = [];
 
 for (let i = 0; i < numsAmount; i++) {
-  const randomNum = Math.ceil(Math.random() * 20);
+  const randomNum = Math.ceil(Math.random() * 100);
 
   // Check if number is already in array
   if(randomNums.includes(randomNum)) {
@@ -48,4 +48,4 @@ function checkSequence() {
 }
 
 // Hide the sequence for 30 secs
-setTimeout (simonSays, 3000);
+setTimeout (simonSays, 30000);
